@@ -1,0 +1,2776 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8200.14.0925.1717                                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource caption='FROZEN - cmpst_00699 as at 26 Feb 2015+' inline='true' name='textscan.42065.453142604165' version='8.3'>
+      <connection class='textscan' directory='D:/Data/Analytics/Data/16022015/FROZEN cmpst_00699 Semester 1 2014-15' filename='FROZEN - cmpst_00699 as at 26 Feb 2015.csv'>
+        <relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[CMPST_00699 users#csv].[STUDENT_NUM]'>
+              </expression>
+              <expression op='[CMPST_00699 essay data#csv].[STUDENT_NUM]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[CMPST_00699 users#csv].[STUDENT_NUM]'>
+                </expression>
+                <expression op='[CMPST_00699 portfolio data#csv].[STUDENT_NUM]'>
+                </expression>
+              </expression>
+            </clause>
+            <relation join='inner' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[EID]'>
+                  </expression>
+                  <expression op='[CMPST_00699 users#csv].[EID]'>
+                  </expression>
+                </expression>
+              </clause>
+              <relation name='FROZEN - cmpst_00699 as at 26 Feb 2015#csv' table='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='datetime' name='EVENT_DATE' ordinal='0' />
+                  <column datatype='string' name='EVENT' ordinal='1' />
+                  <column datatype='string' name='REF' ordinal='2' />
+                  <column datatype='string' name='CONTEXT' ordinal='3' />
+                  <column datatype='string' name='SESSION_ID' ordinal='4' />
+                  <column datatype='string' name='EID' ordinal='5' />
+                  <column datatype='string' name='SESSION_IP' ordinal='6' />
+                  <column datatype='string' name='SESSION_USER_AGENT' ordinal='7' />
+                  <column datatype='datetime' name='SESSION_START' ordinal='8' />
+                  <column datatype='datetime' name='SESSION_END' ordinal='9' />
+                </columns>
+              </relation>
+              <relation name='CMPST_00699 users#csv' table='[CMPST_00699 users#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='USER_ID' ordinal='0' />
+                  <column datatype='string' name='ROLE' ordinal='1' />
+                  <column datatype='string' name='EID' ordinal='2' />
+                  <column datatype='integer' name='STUDENT_NUM' ordinal='3' />
+                  <column datatype='string' name='SURNAME' ordinal='4' />
+                  <column datatype='string' name='FORENAMES' ordinal='5' />
+                  <column datatype='string' name='ID' ordinal='6' />
+                  <column datatype='string' name='Module' ordinal='7' />
+                  <column datatype='string' name='YoS Code' ordinal='8' />
+                  <column datatype='string' name='ATTENDANCE' ordinal='9' />
+                  <column datatype='string' name='STATUS' ordinal='10' />
+                  <column datatype='string' name='REL' ordinal='11' />
+                </columns>
+              </relation>
+            </relation>
+            <relation name='CMPST_00699 portfolio data#csv' table='[CMPST_00699 portfolio data#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                <column datatype='string' name='Module' ordinal='0' />
+                <column datatype='integer' name='STUDENT_NUM' ordinal='1' />
+                <column datatype='datetime' name='P.DUE' ordinal='2' />
+                <column datatype='datetime' name='P.IN' ordinal='3' />
+                <column datatype='string' name='P.MARK' ordinal='4' />
+                <column datatype='string' name='P.WORD_COUNT' ordinal='5' />
+                <column datatype='string' name='P.REF_COUNT' ordinal='6' />
+                <column datatype='string' name='P.LATE' ordinal='7' />
+                <column datatype='string' name='P.TIME_VAR' ordinal='8' />
+                <column datatype='string' name='P.RESIT_MARK' ordinal='9' />
+              </columns>
+            </relation>
+          </relation>
+          <relation name='CMPST_00699 essay data#csv' table='[CMPST_00699 essay data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='Module' ordinal='0' />
+              <column datatype='integer' name='STUDENT_NUM' ordinal='1' />
+              <column datatype='datetime' name='E.DUE' ordinal='2' />
+              <column datatype='datetime' name='E.IN' ordinal='3' />
+              <column datatype='string' name='E.MARK' ordinal='4' />
+              <column datatype='string' name='E.WORD_COUNT' ordinal='5' />
+              <column datatype='string' name='E.REF_COUNT' ordinal='6' />
+              <column datatype='string' name='E.ONTIME' ordinal='7' />
+              <column datatype='string' name='E.TIME_VAR' ordinal='8' />
+              <column datatype='string' name='E.RESIT_MARK' ordinal='9' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[ATTENDANCE]' value='[CMPST_00699 users#csv].[ATTENDANCE]' />
+          <map key='[CONTEXT]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[CONTEXT]' />
+          <map key='[E.DUE]' value='[CMPST_00699 essay data#csv].[E.DUE]' />
+          <map key='[E.IN]' value='[CMPST_00699 essay data#csv].[E.IN]' />
+          <map key='[E.MARK]' value='[CMPST_00699 essay data#csv].[E.MARK]' />
+          <map key='[E.ONTIME]' value='[CMPST_00699 essay data#csv].[E.ONTIME]' />
+          <map key='[E.REF_COUNT]' value='[CMPST_00699 essay data#csv].[E.REF_COUNT]' />
+          <map key='[E.RESIT_MARK]' value='[CMPST_00699 essay data#csv].[E.RESIT_MARK]' />
+          <map key='[E.TIME_VAR]' value='[CMPST_00699 essay data#csv].[E.TIME_VAR]' />
+          <map key='[E.WORD_COUNT]' value='[CMPST_00699 essay data#csv].[E.WORD_COUNT]' />
+          <map key='[EID (CMPST_00699 users.csv)]' value='[CMPST_00699 users#csv].[EID]' />
+          <map key='[EID]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[EID]' />
+          <map key='[EVENT]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[EVENT]' />
+          <map key='[EVENT_DATE]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[EVENT_DATE]' />
+          <map key='[FORENAMES]' value='[CMPST_00699 users#csv].[FORENAMES]' />
+          <map key='[ID]' value='[CMPST_00699 users#csv].[ID]' />
+          <map key='[Module (CMPST_00699 essay data.csv)]' value='[CMPST_00699 essay data#csv].[Module]' />
+          <map key='[Module (CMPST_00699 portfolio data.csv)]' value='[CMPST_00699 portfolio data#csv].[Module]' />
+          <map key='[Module]' value='[CMPST_00699 users#csv].[Module]' />
+          <map key='[P.DUE]' value='[CMPST_00699 portfolio data#csv].[P.DUE]' />
+          <map key='[P.IN]' value='[CMPST_00699 portfolio data#csv].[P.IN]' />
+          <map key='[P.LATE]' value='[CMPST_00699 portfolio data#csv].[P.LATE]' />
+          <map key='[P.MARK]' value='[CMPST_00699 portfolio data#csv].[P.MARK]' />
+          <map key='[P.REF_COUNT]' value='[CMPST_00699 portfolio data#csv].[P.REF_COUNT]' />
+          <map key='[P.RESIT_MARK]' value='[CMPST_00699 portfolio data#csv].[P.RESIT_MARK]' />
+          <map key='[P.TIME_VAR]' value='[CMPST_00699 portfolio data#csv].[P.TIME_VAR]' />
+          <map key='[P.WORD_COUNT]' value='[CMPST_00699 portfolio data#csv].[P.WORD_COUNT]' />
+          <map key='[REF]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[REF]' />
+          <map key='[REL]' value='[CMPST_00699 users#csv].[REL]' />
+          <map key='[ROLE]' value='[CMPST_00699 users#csv].[ROLE]' />
+          <map key='[SESSION_END]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[SESSION_END]' />
+          <map key='[SESSION_ID]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[SESSION_ID]' />
+          <map key='[SESSION_IP]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[SESSION_IP]' />
+          <map key='[SESSION_START]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[SESSION_START]' />
+          <map key='[SESSION_USER_AGENT]' value='[FROZEN - cmpst_00699 as at 26 Feb 2015#csv].[SESSION_USER_AGENT]' />
+          <map key='[STATUS]' value='[CMPST_00699 users#csv].[STATUS]' />
+          <map key='[STUDENT_NUM (CMPST_00699 essay data.csv)]' value='[CMPST_00699 essay data#csv].[STUDENT_NUM]' />
+          <map key='[STUDENT_NUM (CMPST_00699 portfolio data.csv)]' value='[CMPST_00699 portfolio data#csv].[STUDENT_NUM]' />
+          <map key='[STUDENT_NUM]' value='[CMPST_00699 users#csv].[STUDENT_NUM]' />
+          <map key='[SURNAME]' value='[CMPST_00699 users#csv].[SURNAME]' />
+          <map key='[USER_ID]' value='[CMPST_00699 users#csv].[USER_ID]' />
+          <map key='[YoS Code]' value='[CMPST_00699 users#csv].[YoS Code]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>EVENT_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[EVENT_DATE]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>EVENT_DATE</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EVENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EVENT]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>EVENT</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REF</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REF]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>REF</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTEXT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTEXT]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>CONTEXT</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_ID]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>SESSION_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EID]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>EID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_IP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_IP]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>SESSION_IP</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_USER_AGENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_USER_AGENT]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>SESSION_USER_AGENT</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_START</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[SESSION_START]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>SESSION_START</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_END</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[SESSION_END]</local-name>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias>SESSION_END</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[FROZEN - cmpst_00699 as at 26 Feb 2015#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USER_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[USER_ID]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>USER_ID</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ROLE]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>ROLE</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EID (CMPST_00699 users.csv)]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>EID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STUDENT_NUM</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[STUDENT_NUM]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>STUDENT_NUM</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SURNAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SURNAME]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>SURNAME</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FORENAMES</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FORENAMES]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>FORENAMES</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Module</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Module]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>Module</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YoS Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[YoS Code]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>YoS Code</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATTENDANCE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATTENDANCE]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>ATTENDANCE</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATUS]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>STATUS</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REL]</local-name>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias>REL</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[CMPST_00699 users#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Module</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Module (CMPST_00699 portfolio data.csv)]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>Module</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STUDENT_NUM</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[STUDENT_NUM (CMPST_00699 portfolio data.csv)]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>STUDENT_NUM</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.DUE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[P.DUE]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.DUE</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.IN</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[P.IN]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.IN</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.MARK</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[P.MARK]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.MARK</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.WORD_COUNT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[P.WORD_COUNT]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.WORD_COUNT</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.REF_COUNT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[P.REF_COUNT]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.REF_COUNT</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.LATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[P.LATE]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.LATE</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.TIME_VAR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[P.TIME_VAR]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.TIME_VAR</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>P.RESIT_MARK</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[P.RESIT_MARK]</local-name>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias>P.RESIT_MARK</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[CMPST_00699 portfolio data#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Module</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Module (CMPST_00699 essay data.csv)]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>Module</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STUDENT_NUM</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[STUDENT_NUM (CMPST_00699 essay data.csv)]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>STUDENT_NUM</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.DUE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[E.DUE]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.DUE</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.IN</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[E.IN]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.IN</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.MARK</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[E.MARK]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.MARK</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.WORD_COUNT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[E.WORD_COUNT]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.WORD_COUNT</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.REF_COUNT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[E.REF_COUNT]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.REF_COUNT</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.ONTIME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[E.ONTIME]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.ONTIME</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.TIME_VAR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[E.TIME_VAR]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.TIME_VAR</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>E.RESIT_MARK</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[E.RESIT_MARK]</local-name>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias>E.RESIT_MARK</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[CMPST_00699 essay data#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Attendance' datatype='string' name='[ATTENDANCE]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Context' datatype='string' name='[CONTEXT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Calculation2' datatype='integer' name='[Calculation_1320302112706590]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='countd([EID])' scope-isolation='false' />
+      </column>
+      <column caption='Calculation1' datatype='real' name='[Calculation_3000302111227029]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='count([EVENT])/countd([EID])' scope-isolation='false' />
+      </column>
+      <column caption='E.Due' datatype='datetime' name='[E.DUE]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='E.In' datatype='datetime' name='[E.IN]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='E.Mark' datatype='string' name='[E.MARK]' role='dimension' type='nominal'>
+      </column>
+      <column caption='E.Ontime' datatype='string' name='[E.ONTIME]' role='dimension' type='nominal'>
+      </column>
+      <column caption='E.Ref Count' datatype='string' name='[E.REF_COUNT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='E.Resit Mark' datatype='string' name='[E.RESIT_MARK]' role='dimension' type='nominal'>
+      </column>
+      <column caption='E.Time Var' datatype='string' name='[E.TIME_VAR]' role='dimension' type='nominal'>
+      </column>
+      <column caption='E.Word Count' datatype='string' name='[E.WORD_COUNT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='EID (CMPST 00699 users.csv)' datatype='string' name='[EID (CMPST_00699 users.csv)]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;content.read&quot;' value='Resources.read' />
+          <alias key='&quot;melete.section.read&quot;' value='Pathway.read' />
+          <alias key='&quot;pres.begin&quot;' value='Joinsite' />
+        </aliases>
+      </column>
+      <column caption='Event Date' datatype='datetime' name='[EVENT_DATE]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='string' name='[Event (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[EVENT]'>
+          <bin value='&quot;pres.begin&quot;'>
+            <value>&quot;pres.begin&quot;</value>
+            <value>&quot;site.upd&quot;</value>
+          </bin>
+        </calculation>
+        <aliases>
+          <alias key='&quot;pres.begin&quot;' value='Joinsite' />
+        </aliases>
+      </column>
+      <column caption='Forenames' datatype='string' name='[FORENAMES]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Module (CMPST 00699 essay data.csv)' datatype='string' default-role='measure' default-type='quantitative' name='[Module (CMPST_00699 essay data.csv)]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Module (CMPST 00699 portfolio data.csv)' datatype='string' default-role='measure' default-type='quantitative' name='[Module (CMPST_00699 portfolio data.csv)]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='P.Due' datatype='datetime' name='[P.DUE]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='P.In' datatype='datetime' name='[P.IN]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='P.Late' datatype='string' name='[P.LATE]' role='dimension' type='nominal'>
+      </column>
+      <column caption='P.Mark' datatype='string' name='[P.MARK]' role='dimension' type='nominal'>
+      </column>
+      <column caption='P.Ref Count' datatype='string' name='[P.REF_COUNT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='P.Resit Mark' datatype='string' name='[P.RESIT_MARK]' role='dimension' type='nominal'>
+      </column>
+      <column caption='P.Time Var' datatype='string' name='[P.TIME_VAR]' role='dimension' type='nominal'>
+      </column>
+      <column caption='P.Word Count' datatype='string' name='[P.WORD_COUNT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Role' datatype='string' name='[ROLE]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session End' datatype='datetime' name='[SESSION_END]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Session Id' datatype='string' name='[SESSION_ID]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session Ip' datatype='string' name='[SESSION_IP]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session Start' datatype='datetime' name='[SESSION_START]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Session User Agent' datatype='string' name='[SESSION_USER_AGENT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Status' datatype='string' name='[STATUS]' role='dimension' type='nominal'>
+      </column>
+      <column caption='STUDENT NUM (CMPST 00699 essay data.csv)' datatype='integer' name='[STUDENT_NUM (CMPST_00699 essay data.csv)]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='STUDENT NUM (CMPST 00699 portfolio data.csv)' datatype='integer' name='[STUDENT_NUM (CMPST_00699 portfolio data.csv)]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Student Num' datatype='integer' name='[STUDENT_NUM]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Surname' datatype='string' name='[SURNAME]' role='dimension' type='nominal'>
+      </column>
+      <column caption='User Id' datatype='string' name='[USER_ID]' role='dimension' type='nominal'>
+      </column>
+      <column-instance column='[EVENT]' derivation='None' name='[none:EVENT:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Event (group)]' type='palette'>
+            <map to='#17becf'>
+              <bucket>&quot;asn.revise.title&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;msnd.email.send&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;pageorder.reorder&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;annc.delete.own&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;asn.read.assignment&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;pres.end&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;realm.del&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;asn.delete.assignment&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;content.available&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;site.upd.grp.mbrshp&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;asn.revise.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;melete.module.edit&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;messages.new&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;content.delete&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;melete.section.read&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;pageorder.rename&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;asn.new.assignment&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;forums.read&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;pageorder.delete&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;asn.delete.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;content.new&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;site.upd.site.mbrshp&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;content.upd.title&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;pageorder.show&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;pres.begin&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;annc.new&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;asn.read.submission&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;realm.upd&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;site.upd&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;asn.revise.duedate&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;melete.section.delete&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;messages.read&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;content.revise&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;forums.reviseforum&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;messages.delete&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;asn.new.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;forums.response&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;pageorder.hide&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;asn.revise.closedate&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;melete.module.new&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;messages.newfolder&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;asn.delete.submission&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;content.read&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;sitestats.view&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;asn.revise.opendate&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;melete.section.edit&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;messages.reply&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;asn.revise.access&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;forums.revisetopic&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;messages.forward&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;asn.revise.assignment&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;melete.module.delete&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;messages.movedtodeletefolder&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;annc.null&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;asn.submit.submission&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;roleswap.exit&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;user.site.membership.add&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;asn.grade.submission&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;forums.deleteforum&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;forums.new&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;annc.revise.own&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;chat.new&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;roleswap.start&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:EVENT:nk]' type='palette'>
+            <map to='#17becf'>
+              <bucket>&quot;asn.revise.title&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;msnd.email.send&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;pageorder.reorder&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;annc.delete.own&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;asn.read.assignment&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;pres.end&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;realm.del&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;asn.delete.assignment&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;content.available&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;site.upd.grp.mbrshp&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;asn.revise.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;melete.module.edit&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;messages.new&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;content.delete&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;melete.section.read&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;pageorder.rename&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;asn.new.assignment&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;forums.read&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;pageorder.delete&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;asn.delete.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;content.new&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;site.upd.site.mbrshp&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;content.upd.title&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;pageorder.show&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;pres.begin&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;annc.new&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;asn.read.submission&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;realm.upd&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;site.upd&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;asn.revise.duedate&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;melete.section.delete&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;messages.read&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;content.revise&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;forums.reviseforum&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;messages.delete&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;asn.new.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;forums.response&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;pageorder.hide&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;asn.revise.closedate&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;melete.module.new&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;messages.newfolder&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;asn.delete.submission&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;content.read&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;sitestats.view&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;asn.revise.opendate&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;melete.section.edit&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;messages.reply&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;asn.revise.access&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;forums.revisetopic&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;messages.forward&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;asn.revise.assignment&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;melete.module.delete&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;messages.movedtodeletefolder&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;annc.null&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;asn.submit.submission&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;roleswap.exit&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;user.site.membership.add&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;asn.grade.submission&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;forums.deleteforum&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;forums.new&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;annc.revise.own&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;chat.new&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;roleswap.start&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <sort class='manual' column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </sort>
+      </default-sorts>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FROZEN - cmpst_00699 as at 26 Feb 2015+' name='textscan.42065.453142604165' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42065.453142604165'>
+            <column caption='Calculation2' datatype='integer' name='[Calculation_1320302112706590]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd([EID])' scope-isolation='false' />
+            </column>
+            <column caption='Calculation1' datatype='real' name='[Calculation_3000302111227029]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='count([EVENT])/countd([EID])' scope-isolation='false' />
+            </column>
+            <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;content.read&quot;' value='Resources.read' />
+                <alias key='&quot;melete.section.read&quot;' value='Pathway.read' />
+                <alias key='&quot;pres.begin&quot;' value='Joinsite' />
+              </aliases>
+            </column>
+            <column caption='Event Date' datatype='datetime' name='[EVENT_DATE]' role='dimension' type='ordinal'>
+            </column>
+            <column caption='Role' datatype='string' name='[ROLE]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[EVENT]' derivation='Count' name='[cnt:EVENT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EVENT]' derivation='None' name='[none:EVENT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ROLE]' derivation='None' name='[none:ROLE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EVENT_DATE]' derivation='Day-Trunc' name='[tdy:EVENT_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1320302112706590]' derivation='User' name='[usr:Calculation_1320302112706590:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3000302111227029]' derivation='User' name='[usr:Calculation_3000302111227029:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.42065.453142604165].[none:EVENT:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;annc.delete.own&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;annc.new&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;annc.null&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;annc.revise.own&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;asn.delete.assignment&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;asn.delete.assignmentcontent&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;asn.delete.submission&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;asn.new.assignment&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;asn.read.assignment&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;asn.read.submission&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;asn.submit.submission&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;chat.new&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;content.delete&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;content.read&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;forums.new&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;forums.read&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;forums.response&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;melete.section.read&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;messages.delete&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;messages.forward&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;messages.movedtodeletefolder&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;messages.new&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;messages.newfolder&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;messages.read&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;messages.reply&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;msnd.email.send&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[textscan.42065.453142604165].[none:ROLE:nk]'>
+            <groupfilter function='member' level='[none:ROLE:nk]' member='&quot;Student&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.42065.453142604165].[none:ROLE:nk]</column>
+            <column>[textscan.42065.453142604165].[none:EVENT:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <lod column='[textscan.42065.453142604165].[usr:Calculation_1320302112706590:qk]' />
+            </encodings>
+          </pane>
+          <pane id='1' y-axis-name='[textscan.42065.453142604165].[cnt:EVENT:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[textscan.42065.453142604165].[cnt:EVENT:qk]' />
+              <lod column='[textscan.42065.453142604165].[usr:Calculation_1320302112706590:qk]' />
+            </encodings>
+          </pane>
+          <pane id='2' y-axis-name='[textscan.42065.453142604165].[usr:Calculation_3000302111227029:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <lod column='[textscan.42065.453142604165].[usr:Calculation_1320302112706590:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([textscan.42065.453142604165].[cnt:EVENT:qk] + [textscan.42065.453142604165].[usr:Calculation_3000302111227029:qk])</rows>
+        <cols>[textscan.42065.453142604165].[tdy:EVENT_DATE:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FROZEN - cmpst_00699 as at 26 Feb 2015+' name='textscan.42065.453142604165' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42065.453142604165'>
+            <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;content.read&quot;' value='Resources.read' />
+                <alias key='&quot;melete.section.read&quot;' value='Pathway.read' />
+                <alias key='&quot;pres.begin&quot;' value='Joinsite' />
+              </aliases>
+            </column>
+            <column-instance column='[EVENT]' derivation='Count' name='[cnt:EVENT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EVENT]' derivation='None' name='[none:EVENT:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[textscan.42065.453142604165].[cnt:EVENT:qk]' palette='tableau-red-green' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[textscan.42065.453142604165].[cnt:EVENT:qk]' />
+              <color column='[textscan.42065.453142604165].[cnt:EVENT:qk]' />
+              <text column='[textscan.42065.453142604165].[none:EVENT:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FROZEN - cmpst_00699 as at 26 Feb 2015+' name='textscan.42065.453142604165' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42065.453142604165'>
+            <column datatype='string' name='[EID]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;content.read&quot;' value='Resources.read' />
+                <alias key='&quot;melete.section.read&quot;' value='Pathway.read' />
+                <alias key='&quot;pres.begin&quot;' value='Joinsite' />
+              </aliases>
+            </column>
+            <column caption='Role' datatype='string' name='[ROLE]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[EVENT]' derivation='Count' name='[cnt:EVENT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EID]' derivation='None' name='[none:EID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EVENT]' derivation='None' name='[none:EVENT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ROLE]' derivation='None' name='[none:ROLE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <sort class='computed' column='[textscan.42065.453142604165].[none:EVENT:nk]' direction='DESC' using='[textscan.42065.453142604165].[cnt:EVENT:qk]'>
+          </sort>
+          <filter class='categorical' column='[textscan.42065.453142604165].[none:ROLE:nk]'>
+            <groupfilter function='member' level='[none:ROLE:nk]' member='&quot;Student&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.42065.453142604165].[none:ROLE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[textscan.42065.453142604165].[none:EID:nk]' />
+            </encodings>
+            <reference-line axis-column='[textscan.42065.453142604165].[cnt:EVENT:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' formula='average' id='refline0' label-type='automatic' scope='per-cell' symmetric='false' value-column='[textscan.42065.453142604165].[cnt:EVENT:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.42065.453142604165].[cnt:EVENT:qk]</rows>
+        <cols>[textscan.42065.453142604165].[none:EVENT:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FROZEN - cmpst_00699 as at 26 Feb 2015+' name='textscan.42065.453142604165' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42065.453142604165'>
+            <column caption='E.Mark' datatype='string' name='[E.MARK]' role='dimension' type='nominal'>
+            </column>
+            <column caption='EID (CMPST 00699 users.csv)' datatype='string' name='[EID (CMPST_00699 users.csv)]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;content.read&quot;' value='Resources.read' />
+                <alias key='&quot;melete.section.read&quot;' value='Pathway.read' />
+                <alias key='&quot;pres.begin&quot;' value='Joinsite' />
+              </aliases>
+            </column>
+            <column caption='Role' datatype='string' name='[ROLE]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[E.MARK]' derivation='Count' name='[cnt:E.MARK:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EVENT]' derivation='Count' name='[cnt:EVENT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[E.MARK]' derivation='None' name='[none:E.MARK:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EID (CMPST_00699 users.csv)]' derivation='None' name='[none:EID (CMPST_00699 users.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[EVENT]' derivation='None' name='[none:EVENT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ROLE]' derivation='None' name='[none:ROLE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.42065.453142604165].[none:E.MARK:nk]'>
+            <groupfilter from='&quot;40&quot;' function='range' level='[none:E.MARK:nk]' to='&quot;ns&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <sort class='computed' column='[textscan.42065.453142604165].[none:E.MARK:nk]' direction='DESC' using='[textscan.42065.453142604165].[cnt:E.MARK:qk]'>
+          </sort>
+          <sort class='computed' column='[textscan.42065.453142604165].[none:EID (CMPST_00699 users.csv):nk]' direction='DESC' using='[textscan.42065.453142604165].[cnt:EVENT:qk]'>
+          </sort>
+          <filter class='categorical' column='[textscan.42065.453142604165].[none:EVENT:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter from='&quot;asn.revise.assignmentcontent&quot;' function='range' level='[none:EVENT:nk]' to='&quot;msnd.email.send&quot;' />
+              <groupfilter function='member' level='[none:EVENT:nk]' member='&quot;pres.begin&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[textscan.42065.453142604165].[none:ROLE:nk]'>
+            <groupfilter function='member' level='[none:ROLE:nk]' member='&quot;Student&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.42065.453142604165].[none:EVENT:nk]</column>
+            <column>[textscan.42065.453142604165].[none:ROLE:nk]</column>
+            <column>[textscan.42065.453142604165].[none:E.MARK:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.42065.453142604165].[none:EVENT:nk]' />
+              <text column='[textscan.42065.453142604165].[cnt:EVENT:qk]' />
+              <lod column='[textscan.42065.453142604165].[none:E.MARK:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.42065.453142604165].[none:EID (CMPST_00699 users.csv):nk]</rows>
+        <cols>[textscan.42065.453142604165].[cnt:EVENT:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FROZEN - cmpst_00699 as at 26 Feb 2015+' name='textscan.42065.453142604165' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42065.453142604165'>
+            <column caption='Module (CMPST 00699 essay data.csv)' datatype='string' default-role='measure' default-type='quantitative' name='[Module (CMPST_00699 essay data.csv)]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[Module (CMPST_00699 essay data.csv)]' derivation='Count' name='[cnt:Module (CMPST_00699 essay data.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[textscan.42065.453142604165].[cnt:Module (CMPST_00699 essay data.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='1' param='[textscan.42065.453142604165].[cnt:EVENT:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[textscan.42065.453142604165].[none:ROLE:nk]' type='filter' />
+            <card param='[textscan.42065.453142604165].[none:EVENT:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42065.453142604165].[cnt:EVENT:qk]</field>
+          <field>[textscan.42065.453142604165].[none:EID (CMPST_00699 users.csv):nk]</field>
+          <field>[textscan.42065.453142604165].[none:EID:nk]</field>
+          <field>[textscan.42065.453142604165].[none:ID:nk]</field>
+          <field>[textscan.42065.453142604165].[yr:EVENT_DATE:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.42065.453142604165].[cnt:EVENT:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42065.453142604165].[Event (group)]</field>
+          <field>[textscan.42065.453142604165].[none:EID (CMPST_00699 users.csv):nk]</field>
+          <field>[textscan.42065.453142604165].[none:EVENT:nk]</field>
+          <field>[textscan.42065.453142604165].[yr:EVENT_DATE:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[textscan.42065.453142604165].[none:ROLE:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42065.453142604165].[attr:USER_ID:nk]</field>
+          <field>[textscan.42065.453142604165].[none:EID (CMPST_00699 users.csv):nk]</field>
+          <field>[textscan.42065.453142604165].[none:EID:nk]</field>
+          <field>[textscan.42065.453142604165].[none:EVENT:nk]</field>
+          <field>[textscan.42065.453142604165].[none:FORENAMES:nk]</field>
+          <field>[textscan.42065.453142604165].[none:STUDENT_NUM:ok]</field>
+          <field>[textscan.42065.453142604165].[none:SURNAME:nk]</field>
+          <field>[textscan.42065.453142604165].[none:USER_ID:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.42065.453142604165].[none:EVENT:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[textscan.42065.453142604165].[none:EVENT:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42065.453142604165].[none:E.MARK:nk]</field>
+          <field>[textscan.42065.453142604165].[none:EID (CMPST_00699 users.csv):nk]</field>
+          <field>[textscan.42065.453142604165].[none:EID:nk]</field>
+          <field>[textscan.42065.453142604165].[none:EVENT:nk]</field>
+          <field>[textscan.42065.453142604165].[none:ROLE:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42065.453142604165].[none:E.MARK:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      5+U33yGZKzMxtjMPMKu8+LPnuXjxIv6ecboizTnD6s3LXJxdZG5hhcnJ8R1tFi8/9wyzS2vI
+      3jCd0aa29MYCv3jldd58+wpHT5/Eu1PZ33r1RW7Or5DIlhkdbpapWS/wl9/5Ky7fuMXhI8fx
+      e5qGeH36IlevXWVlK8PE+KGdcqry+muvc336Emawn95YM71bl9/jV5cuU6iYDPT37GgT/PJn
+      P+TC1VvUhIfhvuacIR9f5RcvvcR711aYOjrV6gUuvPkay+ube7MKdPWd89zYSBOJ5LFOTzYr
+      jlXnxedfwDAbzC3HeepEc9IU7Rvnv/myj4HBQUf3dfyJp/hsyMtmur0q44/28PTXvopZLxOy
+      HW944gu/jS86zeDkkXYEWpQjUyMIeZKh7nY3OjY5QTxzkdGJI+2hg6Txpae/RkfEj262VfQM
+      j3LurEldaI7J1dDQILGRCTojnS0/T7CDSECmrkYJ+9vaxo+dRu0qMTzQ245A9vPEU59Co45k
+      2xXvGTrE54emKOazjmHG1/71N3nv0nVG+tqT0p7BQbZyJQZHY45CGxns4b1UlmPjY+2s8Ef5
+      ytO/gVcxHUOSoZERKqZMqHvAps1DLBZl5Mhx+jra2mLdHcz+4jxPfObX22EliYH+XkRsnE7b
+      hl6oI0Zn7zCjI85l0FhnF93hLox6e/1d1oI8de4URcvv0NbV4efmmsrp8R6bNh+13Da6FnGk
+      F+vuYUQL0xUO2VaBIBgIEBDCsYHoD0dIpAp89gtPYpuf090Z4d2Xzu/NHODkr32Gb/z2b/Ol
+      z326HaHs5ctP/ya//Y1/w+nJwVZYSZIY3FX5AXp6evD4I4wNt1dlFM1HZ0eYnr5+R2ZBc3c2
+      Yj9XI6tMHDnO5ORh/LZdY18oxpd/42mOjA46wnZ3daBqXgK2blHzRzhz9gmeeuKkI62RyRMc
+      PTxOT3d7nG016szOrxLwKDRsm3Srt65w/u0LzK+0J2IIk/Mv/5zZ1UTrwj8070c/8+Ofki1U
+      HfduX37+x5R0g1SmvZxnGlUuXrpMPldwbIRtLt2iJrSdG1lNJFnmuWf+mZu3Fh2bP6XMNnNr
+      SWR7DMJieWmR7UQK3baKl9xO89RnnuTK9NX2pFtYpIoNli6+zIWby62wxUwaVYU33nzXceIy
+      my+zOXeVG4vthY1GPUeuIrF4/T3iOduFmHSRkS4Pb1644ZgEe6LDKOVtVrfap0SrhRz1SoEf
+      /+yXNm1gqkG8VonltfbiQTmX5cTpM7z60i+p2pbj1+M5vvKbT+/NHKCST/PupSscmjzJ+PDt
+      lk+wPHuNlWSJX/vUpwj5Hr+vylum1RwL28ahCIEphOOsO+B4yMkR1hLIiuxoEIRlIZBaLybc
+      xjStO8PaHqS6p/TuUdvtsX6jYaB5PI45hyRJGEYDj6c9p7KEwDQbKKrWmgNYloUsy835jMfj
+      CIuwmhucO0OSdrx3SQ+BYYrWcyu3tZkNA/UetVmmiaSqraFjU9sePY++PH+LzUyJjdVFm/Xq
+      zN5aQi+lWN7MfNDPH1lkRXZWMABJuqOCAa0X1u4Iu6tCQ7MF3135gbuHlaQ7Kv8HpnePYZvx
+      SnhsFcwe1uOxn2ptatA0j+Pi0m1drcpvCysrqmNi3I73LunJSqvy27Vp96FN1TTHxaWmNnlv
+      DCAcDmHpdYLhDsdhuKBPI1OoEgn5PujnLi77xv8P70fVdEi7zHcAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
+      AAAG60lEQVR4nO3dzW8cdx3H8c/so732xo/x2k6cOLQE05C2qFTl6QASSOXIgSviwgUQ/0H/
+      E9QTSJw4caGHcgEhEiK1FMeCpDQh8cPGju1de/ZhZnd+HIKIUISC8Gjt9PN++bK2Z3/zteX3
+      7O5YHkchhCDAVOG0BwBOEwHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAGgHAWukkd47j
+      OK85gFNxogAkaTgc6v2fvqPQT/KYB59KkWo/+o5Uyk57kGecOIAsyxR/tKUL1xZ0vPVIabuj
+      2qUVlcYrenzrQw36Q4V+R5WFZQ1ajzWI+0qOupq6uqIQSupub6t+qaHOflfzX7igh+/dzOPr
+      wlkSRQo//Ipae5tqp2WVS5GSoyNlUVmz02NqHba0tRPryuqcJufOqzZ24h/L/1kueyqM11Qa
+      K6u8eFnL315Vsnlfvb50/ltva+alZSUP7mgwtaSw31Q0aGvjFze08NZ1jS2tKO0eaWxmVr17
+      t9U9PntHCORj2I+1u9vS3fvHWpyJtHnnnqaWF/RxNKFy2tSwdF43fv+BVtbW9NqrV0Y2Vy4B
+      JM0HunfnlobFuob7TaVHxxq0DpX2Czqcqyvr9lRpNDTsdjUxU1K1XtLOb29o7NKukv1d1Rpz
+      StqxClkvj3FwBhXKVaWDSG988aJa8UDX52c0fm5CnU6qkE0rhIqyC+c0vdQY6VzRSf4iLI5j
+      pWmqX139hsIRL4jxX0SRZn79jlQdnvYkz+A0KKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwR
+      AKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwR
+      AKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwR
+      AKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwR
+      AKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwR
+      AKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKyV
+      8ljk3JeuSt1eHkvh0yiKtL79QK3h0WlP8oxcAnh9tqtKIVLW70iDYR5LSsWiNMxpLZyqIOnd
+      5kf6OH6Q25rnJ2a1G++feJ1cAig01jT19VeVfHJXw7iv0I2lkEq1Oal3rKzXUnFyQSoEDfce
+      qbS0pGH7WFHWU7IXq7qyKFXGNDzYV7FWVShNqlgZqHPzT3ry7cMLr7qgH7zylhIFJf2u5sZr
+      SosT2j54qFZnX69ffkN/37mtSmlMU9NXNOgfajIc6d0Pf6fvvvJV1ade1uP9v+nKwqrWH2xo
+      sV7Xzz9478Rj5RKAQqrOzT+q2Lio8dc+r7TZVKFY0TBuKap/RoXSscJeW4M0UjRT1fi1NSWb
+      OyoUUw2jtqJapLG1a0p3HqncWFL/kzsKnVYuo+GsiLR18FDtUNKViYo2Hu1odvqzqhYyrUxf
+      VDfpql6parw6pb2jLe22H+nN5Ze1ODmj7daOelFNnaygTtpXvVxQnHTzmSqE8H8fYuM4Vpqm
+      2vvJ91Xqx4pKFUXVcYV+T1G5IEVlZb2OChM1hW5PKhSlQV9Rra7Q6ykqRQpZpJD2VZiYVOgn
+      isoFhVCU0q5CkopHgBdfkPTjry0+9ylQY/qy5suZ1nfze6r0PLk8AoRsIGWZQtJTSJ68GA7J
+      089nreQ/t28fPLtN+/DJx/p5TIQXUfPwvpoj3mdOp0E5SuPFxO8BYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYC2f/xQPPEf0r7ez
+      hgAwEvPRrLpR8vwNR4wAMBIPuweam59TMUiN6QXdP2jq7tZfNFmbl7JEq+cva/Pwsb68uqZf
+      3vrNyOYiAIxEqTKlN1evq9Q/1Ea3qm++1FChv6u5uc+pOOhoWKjpe9dWtb5/ONq5Rro32Br0
+      9vT+X/+gg3ZTUbGqe7Up7R3F+kd8Wxfml7VY7Opnt/6spYmxkc5FABiRTOubG0/fPdz+981m
+      ++ntg3iUM3EaFOYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYI
+      ANYIANYIANYIANYIANYIANYIANZyuSzKceOCisnZu+wdzogo0spEXVF09q4N+k/QqOifVNAe
+      6QAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 4' width='192'>
+      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
+      yfBeOAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='64' name='Sheet 5' width='114'>
+      iVBORw0KGgoAAAANSUhEUgAAAHIAAABACAYAAADGbyPbAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAADmElEQVR4nO3df0iUdxzA8Xc9zqVQEaOobocLipMcMqoVyrF/BjIcE67RbXcUyWLGhknl
+      3DUoVjO2RCJrP6Q/thbFLGNESn8YOkZEgf0u0Lu0u+x2W95Mtwkd53z23R/pNFl/6en28fP6
+      6+55nvs+X+7N833u7p+bYYwxqP+9mVM9ATUxNKQQGlIIDSmEhhRCQwqhIYXQkEJoSCE0pBAa
+      UggNKYSGFEJDCqEhhdCQQmhIITSkEBpSCA0phIYUQkMKoSGF0JBCaEghNKQQGlIIDSmEhhRC
+      QwqhIYXQkEJoSCE0pBAaUggNKYSGFEJDCqEhhdCQQmhIITSkEBpSCA0phIYUQkMKoSGFSJvq
+      CUyWYDA41VNIqWkTEiA7O3uqp5AyurQKoSGF0JBCTKt7ZKrFGnZQce9Nvit7GYBrX/nZ9+Mg
+      kIXvQDUex+ijbaLn9lN17ApxO5MlBdvZWZzLbKD/8mE+OtRCPJlG5iIXhSUf4s3JgAcN7Cg7
+      Tnh4CHcF9UPnwkwT7e3tqT3BT2dMwLfOrDvYOrThvjm1LfD043vOmp2l35pg0hhjBs1vTZ+Z
+      T5p7jTFhc6L0A3OiI2EGTdJETgXM+i+vGmOMGbx0wPiGHo+lS+uEiNFQ28qatfkjmxIROvuW
+      Pf0l4U5Cy5bjSgewmJvj4o/bIexElMgza8hfOguLdF5w5+OIdBEDInfv4Fq65F+H05DjZhM9
+      XUvrys0UZY16O8MdhLiN17uB0kPnidtjXrbYSVZHG6EBwP6dtuaLdMV+4UHvQx5a1kiYhYtY
+      3BXlZ/oId/bQ07SPYr8Xf/FuTob6/xlO75HjZEcbOHx1JZv3OLGujdqRs4kjRwBsuht383lT
+      DpWFz43sdxRR9sZ+qjZ5ieOk0Psiz1sWFmOLD5tHwcf1FAw/HbhObXkdt2pKyLX0ihw3y+lh
+      714PTuvJ7YkL1bxbex2wSTz6kzlzMp88oK+Fb+rS8X1RR/3Xe3ipp41s/+ssdKwmn4tcuDcA
+      DNB7roXL7jxWEOHkll00dj8Obf/1iGTaXGYPnVevyBTJyCvh/c5P8fq7H38idWcAMU5X1MDW
+      ajyOV3nHd4OqUh8HWcCqtVt4L9cCHLzy2nwCu9bzfRLSMpfzduUKLCw85XnUVBZzLJ7k2QWr
+      2BAoZ/iOOcOY6fHfWMFg8D/xE13/D0dpdm0c81Vk/HRpnVQJbv46j9UTHBF0aZ1kGbjfKkrJ
+      yHpFCvE3U5WKtj23EBIAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
