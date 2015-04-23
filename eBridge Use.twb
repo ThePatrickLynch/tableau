@@ -1,0 +1,1900 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8300.15.0308.1149                                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource caption='all-april22-2015' inline='true' name='textscan.42117.398981944447' version='8.3'>
+      <connection class='textscan' directory='H:/Analytics data' filename='module_catalogue.csv'>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[all-april22-2015#csv].[EVENT]'>
+              </expression>
+              <expression op='[eventlogdecode#csv].[Alias]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation name='all-april22-2015#csv' table='[all-april22-2015#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='integer' name='EVENT_ID' ordinal='0' />
+              <column datatype='datetime' name='EVENT_DATE' ordinal='1' />
+              <column datatype='string' name='EVENT' ordinal='2' />
+              <column datatype='string' name='REF' ordinal='3' />
+              <column datatype='string' name='SESSION_ID' ordinal='4' />
+              <column datatype='string' name='EVENT_CODE' ordinal='5' />
+              <column datatype='string' name='CONTEXT' ordinal='6' />
+              <column datatype='string' name='SESSION_ID 1' ordinal='7' />
+              <column datatype='string' name='SESSION_SERVER' ordinal='8' />
+              <column datatype='string' name='SESSION_USER' ordinal='9' />
+              <column datatype='string' name='SESSION_IP' ordinal='10' />
+              <column datatype='string' name='SESSION_USER_AGENT' ordinal='11' />
+              <column datatype='datetime' name='SESSION_START' ordinal='12' />
+              <column datatype='datetime' name='SESSION_END' ordinal='13' />
+              <column datatype='string' name='SESSION_ACTIVE' ordinal='14' />
+              <column datatype='string' name='SESSION_HOSTNAME' ordinal='15' />
+              <column datatype='string' name='USER_ID' ordinal='16' />
+              <column datatype='string' name='EID' ordinal='17' />
+            </columns>
+          </relation>
+          <relation name='eventlogdecode#csv' table='[eventlogdecode#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='Alias' ordinal='0' />
+              <column datatype='string' name='Tool' ordinal='1' />
+              <column datatype='string' name='Name' ordinal='2' />
+              <column datatype='string' name='Role' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>EVENT_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EVENT_ID]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>EVENT_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EVENT_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[EVENT_DATE]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>EVENT_DATE</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EVENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EVENT]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>EVENT</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REF</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REF]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>REF</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_ID]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EVENT_CODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EVENT_CODE]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>EVENT_CODE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTEXT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTEXT]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>CONTEXT</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_ID 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_ID 1]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_ID 1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_SERVER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_SERVER]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_SERVER</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_USER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_USER]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_USER</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_IP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_IP]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_IP</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_USER_AGENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_USER_AGENT]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_USER_AGENT</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_START</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[SESSION_START]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_START</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_END</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[SESSION_END]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_END</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_ACTIVE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_ACTIVE]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_ACTIVE</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SESSION_HOSTNAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SESSION_HOSTNAME]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>SESSION_HOSTNAME</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USER_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[USER_ID]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>USER_ID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EID]</local-name>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias>EID</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[all-april22-2015#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Alias</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Alias]</local-name>
+            <parent-name>[eventlogdecode#csv]</parent-name>
+            <remote-alias>Alias</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tool</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Tool]</local-name>
+            <parent-name>[eventlogdecode#csv]</parent-name>
+            <remote-alias>Tool</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[eventlogdecode#csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Role</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Role]</local-name>
+            <parent-name>[eventlogdecode#csv]</parent-name>
+            <remote-alias>Role</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[eventlogdecode#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Context' datatype='string' name='[CONTEXT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Event Code' datatype='string' name='[EVENT_CODE]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Event Date' datatype='datetime' name='[EVENT_DATE]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Event Id' datatype='integer' name='[EVENT_ID]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Session Active' datatype='string' name='[SESSION_ACTIVE]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session End' datatype='datetime' name='[SESSION_END]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Session Hostname' datatype='string' name='[SESSION_HOSTNAME]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session Id 1' datatype='string' name='[SESSION_ID 1]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session Id' datatype='string' name='[SESSION_ID]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session Ip' datatype='string' name='[SESSION_IP]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session Server' datatype='string' name='[SESSION_SERVER]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session Start' datatype='datetime' name='[SESSION_START]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Session User' datatype='string' name='[SESSION_USER]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Session User Agent' datatype='string' name='[SESSION_USER_AGENT]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='string' name='[Tool]' role='dimension' type='nominal'>
+      </column>
+      <column caption='User Id' datatype='string' name='[USER_ID]' role='dimension' type='nominal'>
+      </column>
+      <column-instance column='[EVENT]' derivation='None' name='[none:EVENT:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Tool]' derivation='None' name='[none:Tool:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:EVENT:nk]' type='palette'>
+            <map to='#17becf'>
+              <bucket>&quot;calendar.delete.event&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;calendar.revise.event.frequency&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;forums.delete&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;forums.read&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;messages.unread&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;pageorder.reorder&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;poll.vote&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;profile.staff.update&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;sam.assessment.revise&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;sam.assessment.submit.click_sub&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;user.login.ws&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;\\N&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;annc.create&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;calendar.revise&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;forums.deletetopic&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;forums.reviseforum&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;mneme.assessment.delete&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;prefs.add&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;profile.contact.update&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;profile.student.update&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;sam.pubAssessment.remove&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;sam.questionpool.questionmoved&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;asn.grade.submission&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;asn.revise.opendate&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;chat.new&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;lessonbuilder.delete&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;melete.module.edit&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;mneme.assessment.unpublish&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;profile.friend.ignore&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;profile.friends.view.own&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;roster.view.profile&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;sam.assessment.take.via_url&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;section.add.student&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;site.add&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;asn.save.submission&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;asn.submit.submission&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;content.upd.visibility&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;gradebook.importItem&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;mneme.pool.delete&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;mneme.question.edit&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;news.read&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;profile.privacy.update&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;sam.asessment.revise&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;sam.assessment.create&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;sitestats.prefs.edit&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;user.logout&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;annc.revise.title&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;asn.revise.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;content.read&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;gradebook.deleteItem&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;messages.delete&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;messages.new&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;podcast.read.public&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;profile.new&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;realm.del&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;sam.pubassessment.republish&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;site.del&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;su.become&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;annc.revise.availability&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;asn.read.submission&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;clog.post.restored&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;content.delete&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;melete.section.read&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;mneme.enter&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;podcast.add&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;profile.interests.update&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;realm.add&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;sam.pubassessment.confirm_edit&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;sitestats.report.view&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;syllabus.post.change&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;asn.new.assignment&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;clog.comment.created&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;clog.comment.deleted&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;lessonbuilder.read&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;melete.module.new&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;mneme.auto_complete&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;profile.friend.remove&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;profile.gallery.image.upload&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;profile.info.update&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;sam.assessment.timer_submit&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;section.members.reset&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;site.upd&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;asn.revise.access&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;calendar.new&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;forums.response&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;gradebook.updateItemScore&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;mneme.answer&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;news.revise&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;pageorder.show&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;profile.status.update&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;sam.assessment.take&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;sam.questionpool.deleteitem&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;user.upd.any&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;annc.delete.any&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;calendar.revise.event.time&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;chat.delete.any&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;forums.revisetopic&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;gradebook.updateItemScores&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;mneme.assessment.edit&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;pageorder.disable&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;prefs.upd&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;roleswap.exit&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;sam.setting.edit&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;sam.student.score.update&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;su.view&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;basiclti.launch&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;calendar.revise.event.excluded&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;forums.new&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;gradebook.updateAssignment&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;mneme.pool.new&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;mneme.review&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;pageorder.hide&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;profile.search.name&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;sam.assessment.item.delete&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;sam.assessment.submit&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;sitestats.report.edit&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;wiki.new&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;asn.delete.assignment&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;asn.revise.closedate&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;content.revise&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;gradebook.downloadCourseGrade&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;messages.deletefolder&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;messages.newfolder&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;poll.delete&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;profile.prefs.new&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;realm.upd&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;sam.pubassessment.revise&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;syllabus.read&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;talisaspire.read&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;annc.revise.own&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;asn.revise.assignment&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;clog.post.withdrawn&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;content.new&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;memory.reset&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;messages.forward&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;podcast.delete&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;profile.message.sent&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;realm.clear.cache&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;sam.total.score.update&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;sitestats.view&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;syllabus.post.new&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;basiclti.config&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;calendar.revise.event.access&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;forums.deleteforum&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;gradebook.newItem&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;mneme.pool.edit&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;mneme.question.new&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;pageorder.delete&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;profile.search.interest&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;sam.assessment.publish&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;sam.question.score.update&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;sitestats.report.delete&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;user.site.membership.add&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;annc.revise.access&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;asn.new.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;clog.post.created&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;lessonbuilder.update&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;melete.section.delete&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;mneme.complete&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;pageorder.reset&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;profile.image.change.upload&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;profile.update&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;sam.assessment.timer_submit.url&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;section.student.drop.category&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;site.upd.grp.mbrshp&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;calendar.create&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;calendar.revise.event.exclusions&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;forums.newforum&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;gradebook.updateCourseGrades&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;mneme.question.delete&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;msnd.email.send&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;pageorder.rename&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;profile.socialnetworking.update&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;sam.assessment.submit.checked&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;sam.questionpool.delete&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;sitestats.report.new&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;wiki.revise&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;asn.delete.assignmentcontent&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;asn.revise.duedate&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;content.upd.access&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;gradebook.downloadRoster&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;messages.read&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;mneme.grade&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;poll.update&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;profile.prefs.update&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;roleswap.start&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;sam.pubsetting.edit&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;user.add&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;user.login&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;asn.delete.submission&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;asn.revise.title&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;content.upd.title&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;gradebook.importEntire&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;messages.movedtodeletefolder&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;messages.reply&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;poll.viewResult&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;profile.privacy.new&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;roster.view&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;sam.pubSetting.edit&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;user.login.container&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;user.login.dav&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;annc.new&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;calendar.revise.event.title&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;clog.post.deleted&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;help.access&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;help.search&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;mneme.assessment.new&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;pageorder.enable&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;pres.begin&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;profile.view.other&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;sam.assessment.submit.via_url&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;sam.submit.from_last_page&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;syllabus.delete&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;annc.revise.any&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;asn.read.assignment&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;clog.post.recycled&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;content.available&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;melete.section.edit&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;mneme.continue&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;profile.friend.request&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;profile.view.own&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;realm.join&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;sam.auto-submit.job&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;shortenedurl.create.exists&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;site.upd.site.mbrshp&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;annc.delete.own&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;annc.null&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;calendar.revise.event.type&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;lessonbuilder.create&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;melete.module.delete&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;mneme.assessment.publish&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;pres.end&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;profile.friend.confirm&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;roster.view.photos&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;sam.submit.from_toc&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;section.add&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;shortenedurl.create.ok&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Tool:nk]' type='palette'>
+            <map to='#17becf'>
+              <bucket>&quot;Tests &amp; Quizzes&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;Announcements&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;Profile Tool&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;Calendar&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;Forums&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;News&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;Roster&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;Pathway&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;Site Info&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;N/A&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;Gradebook&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;Messages&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;Preferences&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;Tests, tasks and surveys&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;Assignments&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;Site stats&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;Podcasts&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;Talis&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;Users (My Profile)&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;Help&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;Page Order&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;Section Info&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;Clog&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;Lessons&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;Syllabus&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;Polls&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;Wiki&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;Worksite Setup/Site Info (Sites)&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;Role Swap Function&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;Basic LTI&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;msnd.email send&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;Resources/Drop Box&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;Become User (Super User)&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;Chat&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Patrick eResourcing'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='all-april22-2015' name='textscan.42117.398981944447' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42117.398981944447'>
+            <column caption='Context' datatype='string' name='[CONTEXT]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[EID]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Event Date' datatype='datetime' name='[EVENT_DATE]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='string' name='[Role]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Tool]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[EVENT]' derivation='Count' name='[cnt:EVENT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CONTEXT]' derivation='None' name='[none:CONTEXT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EID]' derivation='None' name='[none:EID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EVENT_DATE]' derivation='None' name='[none:EVENT_DATE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Role]' derivation='None' name='[none:Role:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Tool]' derivation='None' name='[none:Tool:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EVENT_DATE]' derivation='Month-Trunc' name='[tmn:EVENT_DATE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.42117.398981944447].[none:CONTEXT:nk]'>
+            <groupfilter function='member' level='[none:CONTEXT:nk]' member='&quot;12693_1415&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[textscan.42117.398981944447].[none:EID:nk]'>
+            <groupfilter function='member' level='[none:EID:nk]' member='&quot;pdspl&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[textscan.42117.398981944447].[none:EVENT_DATE:qk]' included-values='in-range'>
+            <min>#2014-08-04 10:16:50#</min>
+            <max>#2015-02-18 23:59:59#</max>
+          </filter>
+          <filter class='categorical' column='[textscan.42117.398981944447].[none:Role:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Role:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:Role:nk]' member='&quot;Instructor&quot;' />
+              <groupfilter function='member' level='[none:Role:nk]' member='&quot;Student&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.42117.398981944447].[none:EID:nk]</column>
+            <column>[textscan.42117.398981944447].[none:EVENT_DATE:qk]</column>
+            <column>[textscan.42117.398981944447].[none:CONTEXT:nk]</column>
+            <column>[textscan.42117.398981944447].[none:Role:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[textscan.42117.398981944447].[none:Tool:nk]' />
+              <wedge-size column='[textscan.42117.398981944447].[cnt:EVENT:qk]' />
+              <size column='[textscan.42117.398981944447].[cnt:EVENT:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[textscan.42117.398981944447].[tmn:EVENT_DATE:qk]</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='all-april22-2015' name='textscan.42117.398981944447' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42117.398981944447'>
+            <column caption='Event' datatype='string' name='[EVENT]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Event Date' datatype='datetime' name='[EVENT_DATE]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='string' name='[Role]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[Tool]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[EVENT]' derivation='Count' name='[cnt:EVENT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EVENT_DATE]' derivation='None' name='[none:EVENT_DATE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Role]' derivation='None' name='[none:Role:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Tool]' derivation='None' name='[none:Tool:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EVENT_DATE]' derivation='Month-Trunc' name='[tmn:EVENT_DATE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[textscan.42117.398981944447].[none:EVENT_DATE:qk]' included-values='in-range'>
+            <min>#2014-09-01 10:35:28#</min>
+            <max>#2015-02-18 23:59:59#</max>
+          </filter>
+          <filter class='categorical' column='[textscan.42117.398981944447].[none:Role:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Role:nk]' member='%null%' />
+              <groupfilter function='member' level='[none:Role:nk]' member='&quot;Instructor&quot;' />
+              <groupfilter function='member' level='[none:Role:nk]' member='&quot;Student&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.42117.398981944447].[none:EVENT_DATE:qk]</column>
+            <column>[textscan.42117.398981944447].[none:Role:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[textscan.42117.398981944447].[none:Tool:nk]' />
+              <wedge-size column='[textscan.42117.398981944447].[cnt:EVENT:qk]' />
+              <size column='[textscan.42117.398981944447].[cnt:EVENT:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[textscan.42117.398981944447].[tmn:EVENT_DATE:qk]</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='5' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='3' type='layout-basic' w='84000' x='0' y='0'>
+              <zone h='100000' id='1' name='Patrick eResourcing' show-title='true' w='84000' x='0' y='0'>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='100000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='84000' y='0'>
+              <zone h='20875' id='6' name='Patrick eResourcing' pane-specification-id='0' param='[textscan.42117.398981944447].[none:Tool:nk]' type='color' w='16000' x='84000' y='0'>
+              </zone>
+              <zone h='12875' id='7' name='Patrick eResourcing' pane-specification-id='0' param='[textscan.42117.398981944447].[cnt:EVENT:qk]' type='size' w='16000' x='84000' y='20875'>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='dashboard' maximized='0' name='Dashboard 1'>
+      <active id='6' />
+      <zones>
+        <zone name='Patrick eResourcing'>
+          <viewpoint>
+            <zoom type='entire-view' />
+          </viewpoint>
+          <highlight>
+            <color-one-way>
+              <field>[textscan.42117.398981944447].[none:Tool:nk]</field>
+            </color-one-way>
+          </highlight>
+        </zone>
+        <zone name='Patrick eResourcing' pane-specification-id='0' param='[textscan.42117.398981944447].[none:Tool:nk]' type='color' />
+        <zone name='Patrick eResourcing' pane-specification-id='0' param='[textscan.42117.398981944447].[cnt:EVENT:qk]' type='size' />
+      </zones>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Patrick eResourcing'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.42117.398981944447].[cnt:EVENT:qk]' type='size' />
+            <card pane-specification-id='0' param='[textscan.42117.398981944447].[none:Tool:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[textscan.42117.398981944447].[none:Role:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42117.398981944447].[mn:EVENT_DATE:ok]</field>
+          <field>[textscan.42117.398981944447].[none:CONTEXT:nk]</field>
+          <field>[textscan.42117.398981944447].[none:EID:nk]</field>
+          <field>[textscan.42117.398981944447].[none:EVENT:nk]</field>
+          <field>[textscan.42117.398981944447].[none:EVENT_DATE:qk]</field>
+          <field>[textscan.42117.398981944447].[none:Tool:nk]</field>
+          <field>[textscan.42117.398981944447].[twk:EVENT_DATE:qk]</field>
+          <field>[textscan.42117.398981944447].[yr:EVENT_DATE:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.42117.398981944447].[cnt:EVENT:qk]' type='size' />
+            <card pane-specification-id='0' param='[textscan.42117.398981944447].[none:Tool:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[textscan.42117.398981944447].[none:Role:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42117.398981944447].[none:EVENT:nk]</field>
+          <field>[textscan.42117.398981944447].[none:EVENT_CODE:nk]</field>
+          <field>[textscan.42117.398981944447].[none:EVENT_DATE:qk]</field>
+          <field>[textscan.42117.398981944447].[none:Tool:nk]</field>
+          <field>[textscan.42117.398981944447].[yr:EVENT_DATE:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Patrick eResourcing' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
