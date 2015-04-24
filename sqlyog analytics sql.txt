@@ -24,3 +24,20 @@ SELECT COUNT(DISTINCT(CONTEXT)) FROM sakai_event WHERE INSTR(CONTEXT, "~")=0
 #### all sites using pathwway
 
 SELECT COUNT(DISTINCT(CONTEXT)) FROM sakai_event WHERE INSTR(EVENT, "melete")>0 
+
+
+###
+# select all records and identify site types
+
+SELECT *, 
+SUBSTRING_INDEX(CONTEXT,'_',1) AS ccode ,
+IF(LEFT(CONTEXT,1)='~','MyHome',
+IF(LEFT(CONTEXT,5)='cmpst','Composite',
+IF(LEFT(CONTEXT,5)='cmspt','Composite',
+IF(LENGTH(SUBSTRING_INDEX(CONTEXT,'_',1))=3,'Dept',
+IF(LEFT(CONTEXT,5)=SUBSTRING_INDEX(CONTEXT,'_',1),'Module',
+IF(LENGTH(SUBSTRING_INDEX(CONTEXT,'_',1))=6,'Programme',
+CONTEXT)))))) AS sitetype
+FROM sakai_event
+INNER JOIN sakai_session  ON sakai_event.SESSION_ID=sakai_session.SESSION_ID 
+INNER JOIN sakai_user_id_map ON sakai_session.Session_USER=sakai_user_id_map.USER_ID
