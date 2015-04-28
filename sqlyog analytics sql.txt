@@ -41,3 +41,27 @@ CONTEXT)))))) AS sitetype
 FROM sakai_event
 INNER JOIN sakai_session  ON sakai_event.SESSION_ID=sakai_session.SESSION_ID 
 INNER JOIN sakai_user_id_map ON sakai_session.Session_USER=sakai_user_id_map.USER_ID
+
+
+
+SELECT *,
+IF(LEFT(CONTEXT,1)='~',NULL, IF(LEFT(CONTEXT,5)='cmpst',NULL, IF(LEFT(CONTEXT,5)='cmspt',NULL,
+	IF(LENGTH(SUBSTRING_INDEX(CONTEXT,'_',1))<>5,NULL,SUBSTRING_INDEX(CONTEXT,'_',1))))) AS ccode
+FROM sakai_event
+INNER JOIN sakai_session  ON sakai_event.SESSION_ID=sakai_session.SESSION_ID 
+INNER JOIN sakai_user_id_map ON sakai_session.Session_USER=sakai_user_id_map.USER_ID 
+
+
+SELECT *,
+IF(LEFT(CONTEXT,1)='~','MyHome',
+IF(LEFT(CONTEXT,5)='cmpst','Composite',
+IF(LEFT(CONTEXT,5)='cmspt','Composite',
+IF(LENGTH(SUBSTRING_INDEX(CONTEXT,'_',1))=3,'Dept',
+IF(LEFT(CONTEXT,5)=SUBSTRING_INDEX(CONTEXT,'_',1),'Module',
+IF(LENGTH(SUBSTRING_INDEX(CONTEXT,'_',1))=6,'Programme',
+CONTEXT)))))) AS sitetype,
+IF(LEFT(CONTEXT,1)='~',NULL, IF(LEFT(CONTEXT,5)='cmpst',NULL, IF(LEFT(CONTEXT,5)='cmspt',NULL,
+	IF(LENGTH(SUBSTRING_INDEX(CONTEXT,'_',1))<>5,NULL,SUBSTRING_INDEX(CONTEXT,'_',1))))) AS ccode
+FROM sakai_event
+INNER JOIN sakai_session  ON sakai_event.SESSION_ID=sakai_session.SESSION_ID 
+INNER JOIN sakai_user_id_map ON sakai_session.Session_USER=sakai_user_id_map.USER_ID
